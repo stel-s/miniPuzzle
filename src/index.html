@@ -25,13 +25,146 @@
   </script>-->
 
   <link href="build/main.css" rel="stylesheet">
+<style>
+  body {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
+table {
+  background-color: #CEE4F5;
+  display: inline-block;
+  border: 1px solid #CEE4F5;
+  border-collapse: separate;
+  border-spacing: 3px;
+}
+
+td {
+  height: 50px;
+  width: 50px;
+  padding: 0.5rem;
+  color: #D6D3D1;
+  background-color: white;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+td:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+
+#words {
+	background-color: #FCF6D9;
+}
+
+#tips {
+	background-color: #F5ECC2;
+}
+
+#tips span {
+  display: block;
+}
+
+#words-container, #tips-container{
+  padding: 0px;
+}
+
+#puzzle{
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.layout{
+	padding: 1px;
+  font-size: 28px;
+  width: auto;
+  pull-left
+}
+.layout h3 {
+  padding-left: 28px;
+  color: #E44940;
+}
+
+.layout p {
+  padding-left: 28px;
+}
+
+.layout.bg-alt{
+  font-size: 16px;
+	background: #abb1b8;
+  min-width: 215px;
+	min-height: 214px;
+  float: left;
+  text-align: left;
+}
+
+.layout.bg-alt p, li, .italic{
+  font-style: italic;
+}
+
+.selected {
+  background-color: grey;
+}
+
+.red {
+  background-image: linear-gradient(bottom, #F0473F 50%, #F25B4A 50%);
+  background-image: -o-linear-gradient(bottom, #F0473F 50%, #F25B4A 50%);
+  background-image: -moz-linear-gradient(bottom, #F0473F 50%, #F25B4A 50%);
+  background-image: -webkit-linear-gradient(bottom, #F0473F 50%, #F25B4A 50%);
+  background-image: -ms-linear-gradient(bottom, #F0473F 50%, #F25B4A 50%);
+  color: #F6EE43;
+}
+
+.green {
+  background-image: linear-gradient(bottom, #50BF60 50%, #6ECA7A 50%);
+  background-image: -o-linear-gradient(bottom, #50BF60 50%, #6ECA7A 50%);
+  background-image: -moz-linear-gradient(bottom, #50BF60 50%, #6ECA7A 50%);
+  background-image: -webkit-linear-gradient(bottom, #50BF60 50%, #6ECA7A 50%);
+  background-image: -ms-linear-gradient(bottom, #50BF60 50%, #6ECA7A 50%);
+  color: #F6EE43;
+}
+
+.yellow {
+  background-image: linear-gradient(bottom, #E8DB1D 50%, #F1E41C 50%);
+  background-image: -o-linear-gradient(bottom, #E8DB1D 50%, #F1E41C 50%);
+  background-image: -moz-linear-gradient(bottom, #E8DB1D 50%, #F1E41C 50%);
+  background-image: -webkit-linear-gradient(bottom, #E8DB1D 50%, #F1E41C 50%);
+  background-image: -ms-linear-gradient(bottom, #E8DB1D 50%, #F1E41C 50%);
+  color: #EB5C39;
+}
+.orange {
+  background-image: linear-gradient(bottom, #E59B34 50%, #E5AC4F 50%);
+  background-image: -o-linear-gradient(bottom, #E59B34 50%, #E5AC4F 50%);
+  background-image: -moz-linear-gradient(bottom, #E59B34 50%, #E5AC4F 50%);
+  background-image: -webkit-linear-gradient(bottom, #E59B34 50%, #E5AC4F 50%);
+  background-image: -ms-linear-gradient(bottom, #E59B34 50%, #E5AC4F 50%);
+  color: #F6EE43;
+}
+
+.blue {
+  background-image: linear-gradient(bottom, #538ED2 50%, #609DDA 50%);
+  background-image: -o-linear-gradient(bottom, #538ED2 50%, #609DDA 50%);
+  background-image: -moz-linear-gradient(bottom, #538ED2 50%, #609DDA 50%);
+  background-image: -webkit-linear-gradient(bottom, #538ED2 50%, #609DDA 50%);
+  background-image: -ms-linear-gradient(bottom, #538ED2 50%, #609DDA 50%);
+  color: #F6EE43;
+}
+
+.strike-word {
+  text-decoration: line-through;
+  color: #C9C0B3;
+}
+
+</style>
 </head>
 <body>
 
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
-
+  	
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
 
